@@ -21,7 +21,7 @@ def fetch_page_data(url):
 
 # Fetch data from multiple pages
 base_url = "https://most-followed-mastodon-accounts.stefanhayden.com/"
-pages = 191  # Maximum number of pages to scrape
+pages = 190  # Maximum number of pages to scrape
 all_users = []
 
 for page in range(1, pages + 1):
