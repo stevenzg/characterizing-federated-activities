@@ -34,6 +34,8 @@ std_dev_duration = filtered_data['duration'].std()
 median_duration = filtered_data['duration'].median()
 q1_duration = filtered_data['duration'].quantile(0.25)
 q3_duration = filtered_data['duration'].quantile(0.75)
+max_duration = data['duration'].max()  # Maximum duration from all data
+min_duration = data['duration'].min()  # Minimum duration from all data
 
 # Print results
 print(f"Mean Duration: {mean_duration}")
@@ -41,3 +43,5 @@ print(f"Standard Deviation: {std_dev_duration}")
 print(f"Median Duration: {median_duration}")
 print(f"Q1 Duration: {q1_duration}")
 print(f"Q3 Duration: {q3_duration}")
+print(f"Maximum Duration (all data): {max_duration}")
+print(f"Minimum Duration (all data): {min_duration}")

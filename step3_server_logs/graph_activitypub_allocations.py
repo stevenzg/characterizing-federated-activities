@@ -35,9 +35,15 @@ median_allocations = filtered_data['allocations'].median()
 q1_allocations = filtered_data['allocations'].quantile(0.25)
 q3_allocations = filtered_data['allocations'].quantile(0.75)
 
+# Calculate max and min allocations from the original data
+max_allocations = data['allocations'].max()
+min_allocations = data['allocations'].min()
+
 # Print results
 print(f"Mean Allocations: {mean_allocations}")
 print(f"Standard Deviation: {std_dev_allocations}")
 print(f"Median Allocations: {median_allocations}")
 print(f"Q1 Allocations: {q1_allocations}")
 print(f"Q3 Allocations: {q3_allocations}")
+print(f"Maximum Allocations: {max_allocations}")
+print(f"Minimum Allocations: {min_allocations}")

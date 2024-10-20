@@ -15,23 +15,20 @@ bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
 # Calculate CDF
 cdf = np.cumsum(hist) * np.diff(bin_edges)
 
-# Create subplots
-fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 12))
-
 # Plot PDF
-ax1.plot(bin_centers, hist)
-ax1.set_title('PDF of User Count accross instances')
-ax1.set_xlabel('User Count')
-ax1.set_ylabel('Probability Density Function of User Count')
+plt.figure(figsize=(10, 6))
+plt.plot(bin_centers, hist)
+plt.title('PDF of User Count across instances')
+plt.xlabel('User Count')
+plt.ylabel('Probability Density Function of User Count')
+plt.show()
 
 # Plot CDF
-ax2.plot(bin_centers, cdf)
-ax2.set_title('CDF of User Count accross instances')
-ax2.set_xlabel('User Count')
-ax2.set_ylabel('Cumulative Probability Function of User Count')
-
-# Adjust layout and display
-plt.tight_layout()
+plt.figure(figsize=(10, 6))
+plt.plot(bin_centers, cdf)
+plt.title('CDF of User Count across instances')
+plt.xlabel('User Count')
+plt.ylabel('Cumulative Probability Function of User Count')
 plt.show()
 
 # Print some statistics
